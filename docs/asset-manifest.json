@@ -1,0 +1,151 @@
+{
+  "checkedOn": "2026-10-04",
+  "purpose": "Verified research candidates and explicit integrated assets. Candidate assets are not claimed as downloaded or used.",
+  "assets": [
+    {
+      "id": "kenney-city-commercial",
+      "name": "Kenney City Kit (Commercial)",
+      "source": "https://kenney.nl/assets/city-kit-commercial",
+      "creator": "Kenney",
+      "license": "CC0",
+      "licenseUrl": "https://kenney.nl/support",
+      "status": "verified-candidate-not-downloaded",
+      "use": "generic buildings for cartoon/low-poly; not a Taipei street pack"
+    },
+    {
+      "id": "kenney-city-roads",
+      "name": "Kenney City Kit (Roads)",
+      "source": "https://kenney.nl/assets/city-kit-roads",
+      "creator": "Kenney",
+      "license": "CC0",
+      "licenseUrl": "https://kenney.nl/support",
+      "status": "verified-candidate-not-downloaded",
+      "use": "modular road base"
+    },
+    {
+      "id": "kenney-retro-urban",
+      "name": "Kenney Retro Urban Kit",
+      "source": "https://kenney.nl/assets/retro-urban-kit",
+      "creator": "Kenney",
+      "license": "CC0",
+      "licenseUrl": "https://kenney.nl/support",
+      "status": "verified-candidate-not-downloaded",
+      "use": "retro PS1-style urban base"
+    },
+    {
+      "id": "kenney-impact",
+      "name": "Kenney Impact Sounds",
+      "source": "https://kenney.nl/assets/impact-sounds",
+      "creator": "Kenney",
+      "license": "CC0",
+      "licenseUrl": "https://kenney.nl/support",
+      "status": "downloaded-selected-samples-integrated",
+      "use": "Three mono WAV foley clips layered with original WebAudio effects",
+      "localCredits": "public/audio/credits.json",
+      "localLicense": "public/audio/LICENSE-Kenney.txt",
+      "files": [
+        "public/audio/landing.wav",
+        "public/audio/bonk.wav",
+        "public/audio/trash-hit.wav"
+      ]
+    },
+    {
+      "id": "quaternius-downtown",
+      "name": "Quaternius Downtown City MegaKit (free portion)",
+      "source": "https://quaternius.com/packs/downtowncitymegakit.html",
+      "creator": "Quaternius",
+      "license": "CC0",
+      "status": "verified-candidate-not-downloaded",
+      "caveats": "Author describes approximately 60–70% as free. Complete Source edition contains additional paid content. Boston/NYC style, not Taipei."
+    },
+    {
+      "id": "quaternius-characters",
+      "name": "Ultimate Animated Character Pack",
+      "source": "https://www.patreon.com/quaternius/posts/ultimate-pack-31403272",
+      "creator": "Quaternius",
+      "license": "CC0",
+      "status": "verified-author-announcement-not-downloaded",
+      "use": "animated humanoid candidates"
+    },
+    {
+      "id": "poly-haven",
+      "name": "Poly Haven assets",
+      "source": "https://polyhaven.com/",
+      "creator": "Poly Haven and contributing artists",
+      "license": "CC0 for asset files",
+      "licenseUrl": "https://polyhaven.com/license",
+      "status": "verified-library-not-downloaded",
+      "caveats": "Website example renders, logos and text are not covered by asset CC0."
+    },
+    {
+      "id": "mixamo",
+      "name": "Mixamo character and animation library",
+      "source": "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html",
+      "creator": "Adobe / Mixamo",
+      "license": "Adobe Mixamo terms, not CC0",
+      "licenseUrl": "https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Mixamo-Addl-Terms-en_US-20210623.pdf",
+      "status": "account-required-not-used",
+      "caveats": "Adobe ID required. FAQ permits royalty-free personal/commercial/nonprofit project use. Do not treat raw files as an independently redistributable open asset library."
+    },
+    {
+      "id": "taipei101-sketchfab",
+      "name": "Taipei 101",
+      "source": "https://sketchfab.com/3d-models/taipei-101-0a14fe9530c24becbc7188a9888cf528",
+      "creator": "Romain PERRONE (@ob1style)",
+      "license": "CC Attribution (exact version must be checked on download)",
+      "status": "verified-model-page-not-downloaded",
+      "trianglesApprox": 2200,
+      "caveats": "Attribution required. Not a whole Xinyi street."
+    },
+    {
+      "id": "raohe-steakhouse",
+      "name": "Raohe Steakhouse",
+      "source": "https://www.turbosquid.com/FullPreview/2337609",
+      "creator": "animod_modeling",
+      "license": "Standard, not verified free",
+      "status": "excluded",
+      "caveats": "Page indicates product may be unavailable. Not a full street and not verified CC0."
+    },
+    {
+      "id": "ximending-print",
+      "name": "Taipei, Ximending District miniature",
+      "source": "https://framescapr.hgross.eu/miniatures/3477/",
+      "creator": "framescapr",
+      "license": "not-verified",
+      "status": "excluded",
+      "caveats": "3D printing miniature; game-ready format/license not verified."
+    },
+    {
+      "id": "jiufen-portfolio",
+      "name": "Jiufen CG project",
+      "source": "https://www.behance.net/gallery/34880739/Jiufen",
+      "creator": "ChingTien Chu",
+      "license": "not-verified",
+      "status": "reference-only-not-used",
+      "caveats": "Portfolio presentation, not a verified downloadable free asset."
+    },
+    {
+      "id": "jiufen-splat",
+      "name": "Jiufen Qingyun temple capture",
+      "source": "https://poly.cam/explore/capture/f0bb2fce-f93e-44be-b613-f12156e243a6/Jiufen%2BQingyun%2Btemple%2BTaiwan",
+      "creator": "AlexDryer",
+      "license": "not-verified",
+      "status": "reference-only-not-used",
+      "caveats": "Gaussian splatting capture; redistribution, collision geometry, route usability and download format not verified."
+    }
+  ],
+  "gameReferences": [
+    {
+      "name": "Temple Run / Temple Run 2",
+      "source": "https://imangistudios.com/thegames/temple-run-2/",
+      "officialVideo": "https://www.youtube.com/watch?v=gGPEmulg9ds",
+      "use": "visual and pacing reference only; no commercial asset extraction"
+    },
+    {
+      "name": "Subway Surfers",
+      "source": "https://sybogames.com/",
+      "officialVideo": "https://www.youtube.com/watch?v=fGy-x3H-nxU",
+      "use": "visual and pacing reference only; no commercial asset extraction"
+    }
+  ]
+}

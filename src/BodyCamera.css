@@ -1,0 +1,25 @@
+/* Keep the spectator's view visible at the lower right during every game event. */
+.body-camera.body-camera{right:20px;bottom:104px;width:238px;z-index:12;background:#102d30f2;border:1px solid #d4edac70;border-radius:8px;box-shadow:0 8px 40px #05182290;overflow:hidden}
+.body-camera .camera-feed{position:relative;max-height:240px;background:#092124}
+.body-camera .camera-feed video,.body-camera .camera-feed canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;transform:scaleX(-1)}
+.body-camera .camera-mirror-label{position:absolute;bottom:5px;left:5px;font-size:8px;line-height:1.6;padding:2px 5px;background:#092023b8;color:#effadc;border-radius:3px}
+.body-camera .camera-lanes{display:flex;gap:4px;padding:7px 9px 0;text-align:center}
+.body-camera .camera-lanes span{flex:1;font-size:9px;line-height:1.8;color:#91aa9c;background:#1b424342;border:1px solid transparent;border-radius:3px}
+.body-camera .camera-lanes .active{color:#e8fc86;background:#e8fc8615;border-color:#e8fc866b}
+.body-camera .camera-status{min-height:38px;font-size:10px;padding:7px 9px;align-items:flex-start;line-height:1.65}
+.body-camera .camera-status .status-dot{margin-top:6px}
+.body-camera .camera-footer{font-size:8px;padding:0 9px 9px}
+.body-camera .camera-footer button{font-size:9px;min-height:22px;padding:3px}
+.body-camera .camera-footer button:disabled{opacity:.4}
+.body-camera .camera-header button{min-height:22px;min-width:22px;align-items:center;justify-content:center}
+@media(max-width:720px){.body-camera.body-camera{width:160px;right:10px;bottom:142px}.body-camera .camera-status{font-size:8px}.body-camera .camera-mirror-label{font-size:7px}.body-camera .camera-lanes span{font-size:8px}.body-camera .camera-footer>span{font-size:7px}}
+@media(max-height:700px) and (min-width:721px){.body-camera.body-camera{width:195px;bottom:90px}}
+/* Live detection debug: tracking chip + big action flash so players can verify each move. */
+.body-camera .camera-track{position:absolute;top:5px;left:5px;z-index:2;font-size:10px;font-weight:700;line-height:1.5;padding:2px 6px;border-radius:3px;background:#092023d0;color:#effadc}
+.body-camera .camera-track.ok{color:#102d30;background:#e8fc86}
+.body-camera .camera-track.calibrating{color:#102d30;background:#f7bd74}
+.body-camera .camera-track.lost{color:#fff;background:#d9534fd0}
+.body-camera .camera-flash{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;letter-spacing:.04em;color:#e8fc86;text-shadow:0 2px 0 #102d30,0 0 18px #102d30;pointer-events:none;animation:camera-flash .7s ease-out forwards}
+@keyframes camera-flash{0%{transform:scale(1.35);opacity:1}70%{opacity:1}100%{transform:scale(1);opacity:0}}
+.body-camera .camera-mirror-label{z-index:2}
+@media(max-width:720px){.body-camera .camera-flash{font-size:20px}.body-camera .camera-track{font-size:8px}}

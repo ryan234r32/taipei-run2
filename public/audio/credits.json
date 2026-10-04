@@ -1,0 +1,23 @@
+{
+  "creator": "Kenney",
+  "source": "https://kenney.nl/assets/impact-sounds",
+  "license": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "files": [
+    {
+      "local": "landing.wav",
+      "sourceFile": "Audio/footstep_concrete_002.ogg",
+      "changes": "Converted Ogg to mono 22050Hz WAV for browser compatibility"
+    },
+    {
+      "local": "bonk.wav",
+      "sourceFile": "Audio/impactWood_heavy_002.ogg",
+      "changes": "Converted Ogg to mono 22050Hz WAV for browser compatibility"
+    },
+    {
+      "local": "trash-hit.wav",
+      "sourceFile": "Audio/impactTin_medium_001.ogg",
+      "changes": "Converted Ogg to mono 22050Hz WAV for browser compatibility"
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+.boost-effect {
+  --boost-yellow: #ffea32;
+  --boost-green: #afff37;
+  --boost-teal: #66ffe2;
+  position: absolute;
+  inset: 0;
+  z-index: 18;
+  overflow: hidden;
+  pointer-events: none;
+  isolation: isolate;
+  border-radius: inherit;
+}
+
+.boost-effect__visuals {
+  position: absolute;
+  inset: 0;
+  /* Keep the bottom-right live camera inset readable. */
+  -webkit-mask-image: linear-gradient(135deg, #000 0%, #000 68%, transparent 88%);
+  mask-image: linear-gradient(135deg, #000 0%, #000 68%, transparent 88%);
+}
+
+.boost-effect__edge-glow {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 65px 12px #adff373a, inset 0 0 150px 15px #58ffe214;
+  border: 2px solid #d4ff5a4d;
+  animation: boost-edge-arrive 0.55s ease-out both;
+}
+
+.boost-effect__flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 58%, #fff9c2b3, #c7ff6038 38%, transparent 68%);
+  opacity: 0;
+  /* One soft activation flash, never a looping or alternating strobe. */
+  animation: boost-activation-flash 0.58s ease-out both;
+}
+
+.boost-effect__burst {
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  width: 48vmin;
+  height: 48vmin;
+  opacity: 0;
+  background: radial-gradient(circle, #fffadc 5%, var(--boost-yellow) 30%, #afff37b0 48%, transparent 72%);
+  clip-path: polygon(50% 0%, 56% 25%, 72% 7%, 69% 32%, 94% 22%, 77% 43%, 100% 50%, 78% 57%, 94% 78%, 69% 69%, 72% 93%, 56% 77%, 50% 100%, 43% 77%, 28% 93%, 31% 69%, 6% 78%, 24% 57%, 0% 50%, 24% 43%, 6% 22%, 31% 32%, 28% 7%, 44% 25%);
+  animation: boost-burst 0.76s cubic-bezier(0.1, 0.75, 0.3, 1) both;
+}
+
+.boost-effect__shockwave {
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  width: 28vmin;
+  height: 28vmin;
+  border: 5px solid #efffcbbf;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #caff57, inset 0 0 20px #dfff8059;
+  opacity: 0;
+  animation: boost-shockwave 0.85s cubic-bezier(0.1, 0.65, 0.3, 1) both;
+}
+
+.boost-effect__shockwave--second {
+  border-width: 2px;
+  border-color: var(--boost-teal);
+  animation-delay: 0.15s;
+}
+
+.boost-effect__streaks {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: boost-lines-arrive 0.8s 0.15s ease-out both;
+}
+
+.boost-effect__streak {
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  width: var(--boost-length);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #eaffd1c7 60%, #eaffd100);
+  transform-origin: 0 50%;
+  opacity: 0;
+  animation: boost-speed-streak var(--boost-duration) var(--boost-delay) linear infinite;
+  will-change: transform, opacity;
+}
+
+.boost-effect__streak:nth-child(3n) {
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #9dffe27a, transparent);
+}
+
+.boost-effect__cut-in {
+  position: absolute;
+  left: 50%;
+  top: 51%;
+  display: grid;
+  justify-items: center;
+  width: max-content;
+  opacity: 0;
+  color: #fffcea;
+  text-shadow: 0 4px 0 #163721, 0 0 22px #203812;
+  transform: translate(-50%, -50%) rotate(-7deg);
+  animation: boost-cut-in 1.35s cubic-bezier(0.16, 0.8, 0.22, 1) both;
+}
+
+.boost-effect__cut-in > span {
+  padding: 3px 16px;
+  color: #162c16;
+  background: var(--boost-yellow);
+  font: 900 13px/1.4 system-ui, sans-serif;
+  letter-spacing: 0.15em;
+  text-shadow: none;
+  border-radius: 3px;
+}
+
+.boost-effect__cut-in > strong {
+  font: italic 1000 clamp(48px, 11vmin, 102px)/1.04 system-ui, sans-serif;
+  letter-spacing: -0.07em;
+}
+
+.boost-effect__cut-in > small {
+  margin-top: 5px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #102319d9;
+  font: 800 clamp(12px, 2.3vmin, 17px)/1.4 system-ui, sans-serif;
+}
+
+.boost-effect__badge {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 8px 18px 8px 12px;
+  border: 1px solid #e9ffbc;
+  border-radius: 8px;
+  background: linear-gradient(115deg, #fff5a0 0%, #ffeb43 56%, #bdff62 100%);
+  color: #153b24;
+  box-shadow: 0 4px 0 #294f23, 0 9px 24px #09281780, 0 0 28px #d1ff5952;
+  transform: translateX(-50%) skew(-5deg);
+  animation: boost-badge-arrive 0.65s cubic-bezier(0.2, 0.85, 0.3, 1.1) both;
+}
+
+.boost-effect__bolt {
+  width: 20px;
+  height: 29px;
+  flex: 0 0 auto;
+  color: #3c8a2b;
+}
+
+.boost-effect__brand {
+  min-width: 84px;
+  display: grid;
+  place-items: center;
+}
+
+.boost-effect__brand img {
+  width: 112px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.boost-effect__brand-fallback {
+  display: none;
+  font: 900 23px/1 system-ui, sans-serif;
+  letter-spacing: -0.06em;
+}
+
+.boost-effect__brand[data-logo-failed='true'] img {
+  display: none;
+}
+
+.boost-effect__brand[data-logo-failed='true'] .boost-effect__brand-fallback {
+  display: block;
+}
+
+.boost-effect__badge-type {
+  display: grid;
+  gap: 1px;
+  padding-left: 11px;
+  border-left: 1px solid #38652752;
+  white-space: nowrap;
+}
+
+.boost-effect__badge-type strong {
+  font: italic 1000 24px/1 system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.boost-effect__badge-type span {
+  font: 900 10px/1.2 system-ui, sans-serif;
+  letter-spacing: 0.2em;
+}
+
+@keyframes boost-activation-flash {
+  0% { opacity: 0; }
+  18% { opacity: 0.78; }
+  100% { opacity: 0; }
+}
+
+@keyframes boost-burst {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(0deg) scale(0.15); }
+  17% { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(15deg) scale(2.7); }
+}
+
+@keyframes boost-shockwave {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.2); }
+  10% { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(6); }
+}
+
+@keyframes boost-edge-arrive {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes boost-lines-arrive {
+  to { opacity: 1; }
+}
+
+@keyframes boost-speed-streak {
+  0% { opacity: 0; transform: rotate(var(--boost-angle)) translateX(22vmin) scaleX(0.25); }
+  24% { opacity: 0.3; }
+  72% { opacity: 0.48; }
+  100% { opacity: 0; transform: rotate(var(--boost-angle)) translateX(85vmin) scaleX(1.9); }
+}
+
+@keyframes boost-cut-in {
+  0% { opacity: 0; transform: translate(-110%, -50%) rotate(-11deg) scale(1.18); }
+  13% { opacity: 1; transform: translate(-50%, -50%) rotate(-7deg) scale(1); }
+  70% { opacity: 1; transform: translate(-50%, -50%) rotate(-7deg) scale(1.04); }
+  100% { opacity: 0; transform: translate(8%, -50%) rotate(-3deg) scale(0.9); }
+}
+
+@keyframes boost-badge-arrive {
+  from { opacity: 0; transform: translate(-50%, -35px) skew(-5deg) scale(0.85); }
+  to { opacity: 1; transform: translate(-50%, 0) skew(-5deg) scale(1); }
+}
+
+@media (max-width: 600px) {
+  .boost-effect__badge { top: 12px; gap: 7px; padding: 7px 11px; }
+  .boost-effect__brand img { width: 92px; height: 32px; }
+  .boost-effect__badge-type strong { font-size: 21px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boost-effect__flash,
+  .boost-effect__burst,
+  .boost-effect__shockwave,
+  .boost-effect__streaks,
+  .boost-effect__cut-in { display: none; }
+  .boost-effect__badge,
+  .boost-effect__edge-glow { animation: none; }
+}
